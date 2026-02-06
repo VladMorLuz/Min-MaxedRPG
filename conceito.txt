@@ -1,0 +1,19 @@
+https://www.minmaxedrpg.com/
+Tailwind CSS + Astro + React // Boostrap
+
+TASKS=======
+Montar uma exemplo no figma
+
+ANOTADO=======
+*Banner border round
+*Header, footer, "belt"
+*Margin
+
+*Algumas ideias:
+*Captcha
+*Formulário
+
+*Fichas dos personagens
+*Galeria
+*Calendário
+*Lista de episódios
