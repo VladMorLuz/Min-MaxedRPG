@@ -1,37 +1,100 @@
 ---
-
+import Layout from '../layouts/layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Min Maxd RPG</title>
-	</head>
-	<body>
-		<header>
-			Min Maxed
-		</header>
-		<h2> A Bunch of Deadly Nerds! </h2>
-		<p>
-			A lot of people have asked... and asked... and asked... 
-			for us to come together and play DnD!
-			<br>
-			And if we are going to do this... 
-			might as well do it right! 
-			<br>
-			We are bringing together the biggest names in SwordTube...? WeaponTube...? 
-			you get it... 
-			to play the most MIN-MAXED tabletop RPG Characters... 
-			probably EVER. 
-			<br>
-			Ourselves!
-		</p>
-		<footer>
-			Min-Maxed-RPG @2025
-		</footer>
-	</body>
-</html>
+<Layout title="Min-Maxed RPG | The Ultimate Tabletop Experience">
+	
+	<section class="hero-section">
+		<img src="/images/Min-Maxed-cast.png" alt="min-maxed-cast" class="hero-image" />
+		
+		<h1 class="hero-title">
+			A Bunch of <span class="highlight">Deadly Nerds!</span>
+		</h1>
+		
+		<div class="hero-text">
+			<p>
+				A lot of people have asked... and asked... and asked...<br>
+				for us to come together and play DnD!
+			</p>
+			
+			<p class="text-bold">
+				And if we are going to do this... might as well do it right!
+			</p>
+			
+			<p>
+				We are bringing together the biggest names in SwordTube...? WeaponTube...? 
+				you get it... to play the most MIN-MAXED tabletop RPG Characters... 
+				probably EVER.
+			</p>
+			
+			<p class="text-epic">
+				Ourselves!
+			</p>
+		</div>
+
+	</section>
+
+</Layout>
+
+<style>
+	/* Todo esse CSS aqui SÓ afeta esse arquivo index.astro */
+
+	.hero-section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 5rem 0;
+		gap: 2rem;
+		margin: 0 auto;
+	}
+
+	.hero-image {
+		width: 100%;
+		border-radius: 0.5rem;
+		box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5); 
+	}
+
+	.hero-title {
+		font-family: 'Cinzel', serif; 
+		font-size: 3rem; 
+		font-weight: 700;
+		color: white;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+	}
+
+	@media (min-width: 768px) {
+		.hero-title {
+			font-size: 4.5rem; 
+		}
+	}
+
+	.highlight {
+		color: #d97706; 
+	}
+
+	.hero-text {
+		color: #a1a1aa; 
+		font-size: 1.105rem;
+		line-height: 1.625;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.text-bold {
+		font-weight: 700;
+		color: #e4e4e7;
+	}
+
+	.text-epic {
+		font-family: 'Cinzel', serif;
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: #f59e0b; 
+		margin-top: 2rem;
+	}
+</style>

@@ -1,0 +1,52 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<title>{title}</title>
+		<meta name="description" content="Min-Maxed RPG: Bringing together the biggest names in SwordTube for the ultimate DnD campaign." />
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+	</head>
+	
+	<body class="bg-zinc-950 text-zinc-300 font-inter min-h-screen flex flex-col">
+		
+		<header class="w-full p-6 border-b border-zinc-800 bg-zinc-900/50 backdrop-blur-sm sticky top-0 z-50">
+			<div class="max-w-7xl mx-auto flex justify-between items-center">
+				<a href="/" class="text-2xl font-cinzel font-bold text-amber-500 hover:text-amber-400 transition-colors">
+					MIN-MAXED
+				</a>
+			</div>
+		</header>
+
+		<main class="flex-grow flex flex-col w-full max-w-7xl mx-auto p-6 sm:p-12">
+			<slot />
+		</main>
+
+		<footer class="w-full p-8 border-t border-zinc-800 text-center text-zinc-500 text-sm mt-auto">
+			<p>Min-Maxed RPG © {new Date().getFullYear()} - A Bunch of Deadly Nerds.</p>
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		color-scheme: dark;
+	}
+	.font-cinzel { font-family: 'Cinzel', serif; }
+	.font-inter { font-family: 'Inter', sans-serif; }
+</style>
